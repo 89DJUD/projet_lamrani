@@ -1,0 +1,16 @@
+# Environnement Python : chacun recrée le sien (voir README)
+.venv/
+__pycache__/
+*.pyc
+
+# Ancien corpus finance (abandonné, 187 Mo)
+corpus_finance/
+
+# Journaux des calculs
+results/*.txt
+
+# Fichiers système / éditeur
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
