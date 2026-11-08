@@ -109,3 +109,17 @@ L’[audit de la réponse incorrecte](docs/diagnostic_reponse.md) détaille une 
 Les 120 réponses des six configurations Llama 3 Q2_K ont été évaluées : qualité, biais NLI et énergie. Le tableau complet pour l’optimisation est `results/evaluations/campagne_complete/configurations_completes.csv`. Consulter [les résultats et limites](docs/resultats_campagne.md).
 
 Pour exécuter ou reprendre la campagne : `python -m migrant_ai.campaign`. Voir [le protocole de reprise](docs/campagne_complete.md). Les erreurs du modèle sont conservées dans les résultats.
+
+## Périmètre par rapport à l’article
+
+La campagne dite complète couvre les six configurations du protocole local sur 20 questions. Elle ne reproduit pas l’ensemble des expériences du PDF (125 configurations sur 91 questions). Les méthodes supplémentaires sont désormais proposées dans le lanceur expérimental et leur état d’exécution est documenté séparément ; cela ne transforme pas les anciens résultats en reproduction du PDF. Voir [l’audit de correspondance](docs/conformite_article.md) pour le détail et les responsabilités.
+
+## Méthodes complémentaires et essais réels
+
+La perplexité causale, les catégories sociales du PDF, le filtrage des passages et le résumé BART sont disponibles dans la même application Python, via les [commandes expérimentales documentées](docs/protocole_experiences.md). Le profil `protocols/article.json` décrit la grille de 125 configurations ; le profil `protocols/local.json` est une adaptation française pour ce PC. Aucun modèle n’est chargé par la simple consultation du plan.
+
+Le pilote apparié dans `results/evaluations/essai_integration/` couvre une question réelle dans les deux variantes. Il comprend des mesures effectives de qualité, de biais, d’énergie et de perplexité. Les deux réponses sont identiques sur ce cas : ce pilote ne démontre pas un gain de qualité. Les passages courts n’ont pas été résumés ; BART a été testé séparément sur le texte anglais du PDF. Le pilote est exclu du tableau des configurations complètes sur 20 questions.
+
+Les tableaux de `data/article/` sont les données publiées par les auteurs, attribuées et vérifiées ; ce ne sont pas nos mesures. Les 91 textes question/référence originaux sont absents de ces fichiers. Ils ne sont pas inventés et cette campagne n’est pas exécutée, conformément au périmètre décidé par l’équipe.
+
+Les compléments sont terminés sur les 120 réponses : perplexité et cinq indicateurs sociaux français. Le tableau local le plus complet est `results/evaluations/complements_complets/configurations_completes.csv`. Lire [les méthodes, résultats et limites](docs/resultats_complementaires.md) avant de comparer ces critères.

@@ -1,0 +1,111 @@
+{
+  "settings": {
+    "scope": "french-hardware-adaptation",
+    "test_set": "test_set.csv",
+    "expected_questions": 20,
+    "language": "fr",
+    "corpus": "corpus",
+    "variants": [
+      "baseline",
+      "integrated"
+    ],
+    "chunk_sizes": [
+      50
+    ],
+    "top_k": [
+      2
+    ],
+    "temperatures": [
+      0.1
+    ],
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "similarity_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "social_backend": "multilingual_nli",
+    "summary_model": "facebook/bart-large-cnn",
+    "filter_threshold": 0.5,
+    "threshold_origin": "project-choice-not-specified-in-paper",
+    "country": "MAR",
+    "release_between_stages": true,
+    "generation": {
+      "backend": "ollama",
+      "model": "llama3:8b-instruct-q2_K",
+      "context_tokens": 2048,
+      "max_new_tokens": 150,
+      "seed": 42,
+      "tokenizer_model": "NousResearch/Meta-Llama-3-8B-Instruct",
+      "server_adds_bos": true
+    },
+    "perplexity": {
+      "backend": "gguf",
+      "model_path": ".runtime/llama3-q2.gguf",
+      "max_length": 512,
+      "stride": 256
+    },
+    "retrieval_backend": "original",
+    "retrieval_threshold": 0.4
+  },
+  "sha256": {
+    "test_set.csv": "58e3ace86f5c8785e565e92f994a02316601d8eba524fdd66a799066388497b6",
+    "corpus\\01_regroupement_familial_UE.pdf": "e69491089df7e862165e25bb772130a3bbad5b04b6f246eddd5511808eb118bd",
+    "corpus\\02_residents_longue_duree_UE.pdf": "c332c1a933aedaa285f07d30c1efab2c35c1426f639a7807713409f7b7d19db8",
+    "corpus\\03_protection_internationale_UE.pdf": "91807633da2fa1fbee73d20d3247fa71ea48723573088588d45c50c7f791e41a",
+    "corpus\\04_accueil_demandeurs_asile_UE.pdf": "6a41e40b9d12e28654e2d47ceba395703ae254aed0a82b6be62c1c5344d4af2a",
+    "corpus\\05_etudiants_chercheurs_UE.pdf": "159a4afa30d3310d0f87f82e1230cbad6c08304cabcc3c766141eea8900f06bb",
+    "corpus\\07_guide_statut_refugie_UNHCR_2019.pdf": "4f45aed3fb9996ad0a1306f2fcab4135395b903cb79ab43621b62ffbcc84327c",
+    "corpus\\08_permis_unique_travail_UE_2024.pdf": "e17f5be8ab0ad5d66518e68791504f0d28e088de0f6c7f413bfabbfcd3e692e4",
+    "corpus\\09_carte_bleue_europeenne_UE.pdf": "472c65cfe5fc4ee865e2eea6b7dae6e7451769a009f33e19be807f9873aa9e25",
+    "migrant_ai\\__init__.py": "05979c945e42ad6ea9b6e19e2607515f3c31ffb8f55f8ead66bdc25f0e9bba08",
+    "migrant_ai\\campaign.py": "6386848088f1da6e7b5797800f79497e05476527c1e5a86486ed687786a7c5d7",
+    "migrant_ai\\complete_evaluation.py": "8b49cc131c9ddc745cdc5b12f41f832f0f3f632bd0725f3b966905d4e55e9baa",
+    "migrant_ai\\context_processing.py": "e46945f5148d39ae1f31feb0f0cc3b5eee33cbb90a71685c417d9eac995a0dc3",
+    "migrant_ai\\diagnostic.py": "413e2426d8d8f9240748bb8ebfedda24ce424d3f702be97fe26f95bc8cdb3626",
+    "migrant_ai\\enrich_results.py": "d8854cd46b4b56741ebebb5f2b27b45d37af9a612bf024ed6e54f6635d600b4d",
+    "migrant_ai\\experiments.py": "5526a7b03c27c05b69a42e74c8e5aa9072b529d46d6716f215f2f59461850958",
+    "migrant_ai\\fairness.py": "e1f1c5f0b842bf4be82e79c6c73651389d10a176e2da57493133691ed3c45c75",
+    "migrant_ai\\footprint.py": "5358422fb1d4fbce63273305b1830f50341122b4d4ddec39cab45b4291aa2ba4",
+    "migrant_ai\\generation.py": "7b4fee16e6e31b35c1de2669a6e980a05dcdbc729053b978b38f0cfea78ee1d3",
+    "migrant_ai\\interface.py": "6aa3f61ae3bd258a1f9c0917c5d65978144da71b7ee627f060d3d4f63d56816e",
+    "migrant_ai\\model_registry.py": "170c635a69f5b74906e261cf52755a3fd9d916216ca36d7477ea2a1f1277d54b",
+    "migrant_ai\\paper_metrics.py": "befc47a5423f676d54d63aa901751157aaf1c2e5e12276111fab28449c65d6d4",
+    "migrant_ai\\perplexity.py": "fa16a97b258a2f217c742221b1167d22db31fec909f7589a063240b8e35c94f9",
+    "migrant_ai\\pipeline.py": "dc64ab5237473d5ed1fcfe4337ec6714b6ce6c44067b886258ae2a657c1355e3",
+    "migrant_ai\\prepare_models.py": "8d17c4b426ca5b02381564ab6f2aa20d61dec0645f13f878570ec7927f7c1d29",
+    "migrant_ai\\quality.py": "e3cb8415cdd4153aedec4f0e5da04c0cf7d3a7b2835472d0e3b670e431879622",
+    "migrant_ai\\run_study.py": "b7b8e934ceebb9c6e18923f6d36292583ccc86217193ae9452f1b015ee6e3997",
+    "migrant_ai\\study_generation.py": "1d24d5bcbb70c570199c1cb81776687167ecfedafb7527174fd405c7042bd5f2",
+    "migrant_ai\\study_protocol.py": "61152b8a2a3c3898408a8f182714507af1602486428aa72b4606bbc354aee1d3",
+    "migrant_ai\\study_retrieval.py": "f6afab7d7a1fa59222e7ff052653ab0fb70bfa21b99a359e7a0ab48610b343be",
+    "migrant_ai\\validate_generation.py": "789162b2f326a19bdcd36b1ec4a95f493338260287936351481c7d8de9865641",
+    "rag.py": "ffceddb32f3df63f0eaa9ef7d71d88bf73a16b3d27cf791395198f2b5ff5bc45"
+  },
+  "model_snapshots": {
+    "NousResearch/Meta-Llama-3-8B-Instruct": {
+      "model": "NousResearch/Meta-Llama-3-8B-Instruct",
+      "revision": "53346005fb0ef11d3b6a83b12c895cca40156b6c",
+      "files": {
+        "special_tokens_map.json": "462d91939dbc37178aa5a3eae7068d1990ccc92e09f288cc71f42cdf139d69cc",
+        "generation_config.json": "d1af74d8ba49428ab2faa65f7948165cc6bf52b740e57e840f8af772587c894c",
+        "config.json": "61f3de03a16ca8046b05dc777bce72717022bc8522152eee61a69072272ef54b",
+        "tokenizer_config.json": "da0e3a7cce6e4d787e85eb1c24d548420e0d7fe2c7a214e192795c46e40d75bb",
+        "tokenizer.json": "e134af98b985517b4f068e3755ae90d4e9cd2d45d328325dc503f1c6b2d06cc7"
+      }
+    },
+    "facebook/bart-large-cnn": {
+      "model": "facebook/bart-large-cnn",
+      "revision": "37f520fa929c961707657b28798b30c003dd100b",
+      "files": {
+        "generation_config.json": "4897361917410254e3132e8fe7786d37f3ef7cff54a650845c1147c2450a790f",
+        "config.json": "c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed",
+        "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+        "vocab.json": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655",
+        "tokenizer.json": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+        "model.safetensors": "40041830399afb5348525ef8354b007ecec4286fdf3524f7e6b54377e17096cb"
+      }
+    }
+  },
+  "metric_version": "paper-methods-v1",
+  "study_id": "b7dabc2b5f5b0840d7413a8c81faa0ede0f5c6976412809212712abdc40b6a23",
+  "pilot_limit": 1,
+  "ollama_digest": "2745d547f3764a7ee6902b19e08e98a8f41f0f69e5615d9dc29bb3d7a27fc715",
+  "gguf_sha256": "eaa3ffa9267f65b2beebac4803927e752bd5ac6cc8d0e256e38e9df2ec214af4"
+}

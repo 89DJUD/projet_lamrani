@@ -73,3 +73,7 @@ classement sans les traiter comme des configurations distinctes.
 ## Campagne complète avec énergie et biais NLI
 
 Utiliser `results/evaluations/campagne_complete/configurations_completes.csv` pour les six configurations Q2_K : 20 questions et 20 mesures d’énergie chacune. Les réponses et signaux de biais individuels sont dans `responses.csv`. Voir [l’analyse des résultats](resultats_campagne.md). Les scores NLI restent exploratoires. Les identifiants C1 à C6 sont locaux à ce tableau. Énergie et CO₂ sont liés par le même facteur carbone : leur attribuer deux poids indépendants peut compter deux fois la même information. Les métriques de qualité sont aussi corrélées ; justifier les poids et étudier la sensibilité du classement.
+
+## Tableau local enrichi
+
+Le tableau le plus complet pour les six alternatives locales est `results/evaluations/complements_complets/configurations_completes.csv`. Il ajoute la perplexité, les cinq indicateurs NLI français, la dispersion et la provenance de l’évaluation. Minimiser la perplexité seulement à modèle/tokenizer et périmètre identiques. Les indicateurs sociaux restent exploratoires ; leurs directions et poids demandent une justification, notamment pour anti-stéréotypes et neutralité. Ne pas mélanger leurs versions ni traiter les changements de scores sur les mêmes textes comme une mitigation. Le pilote d’intégration d’une question n’est pas admissible au classement des configurations complètes sur 20 questions.

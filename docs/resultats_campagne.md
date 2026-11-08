@@ -33,3 +33,7 @@ Les 120 mesures CodeCarbon sont disponibles. Leur somme sur les seuls intervalle
 Vérifications réalisées : 120 identifiants uniques, aucune réponse vide, couverture des 20 questions dans chaque configuration, scores bornés et finis, 120 mesures environnementales, 120 évaluations NLI et conformité des empreintes du protocole. Les tests automatisés ne remplacent pas une validation factuelle humaine exhaustive.
 
 Le modèle Q2_K, le prompt scoped-context-v2 et les indicateurs NLI distinguent cette campagne des résultats historiques. Ne pas fusionner les campagnes comme s’il s’agissait du même protocole. Une seule exécution par configuration ne permet pas de quantifier la variabilité entre répétitions.
+
+## Périmètre par rapport à l’article
+
+La campagne dite complète couvre les six configurations du protocole local sur 20 questions. Elle ne reproduit pas l’ensemble des expériences du PDF (125 configurations sur 91 questions). Les méthodes supplémentaires sont désormais proposées dans le lanceur expérimental et leur état d’exécution est documenté séparément ; cela ne transforme pas les anciens résultats en reproduction du PDF. Voir [l’audit de correspondance](conformite_article.md) pour le détail et les responsabilités.

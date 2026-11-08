@@ -1,0 +1,15 @@
+{
+  "record_id": "50:2:0.1:0",
+  "prediction": "Selon le contexte, les membres de la famille nucléaire qui peuvent bénéficier du regroupement familial sont le conjoint et les enfants mineurs.",
+  "perplexity": 14.828715365424143,
+  "perplexity_nll": 2.6965655283535366,
+  "perplexity_tokens": 35,
+  "perplexity_max_length": 256,
+  "perplexity_stride": 128,
+  "perplexity_scope": "prediction_unconditional",
+  "perplexity_method": "teacher-forcing-sliding-v1",
+  "perplexity_model": "gguf-sha256:eaa3ffa9267f65b2beebac4803927e752bd5ac6cc8d0e256e38e9df2ec214af4",
+  "perplexity_revision": "eaa3ffa9267f65b2beebac4803927e752bd5ac6cc8d0e256e38e9df2ec214af4",
+  "seconds_test": 15.544592999998713,
+  "purpose": "real_single_response_functional_check_not_full_campaign"
+}

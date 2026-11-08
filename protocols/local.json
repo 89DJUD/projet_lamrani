@@ -1,0 +1,45 @@
+{
+  "scope": "french-hardware-adaptation",
+  "test_set": "test_set.csv",
+  "expected_questions": 20,
+  "language": "fr",
+  "corpus": "corpus",
+  "variants": [
+    "baseline",
+    "integrated"
+  ],
+  "chunk_sizes": [
+    50
+  ],
+  "top_k": [
+    2
+  ],
+  "temperatures": [
+    0.1
+  ],
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "similarity_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "social_backend": "multilingual_nli",
+  "summary_model": "facebook/bart-large-cnn",
+  "filter_threshold": 0.5,
+  "threshold_origin": "project-choice-not-specified-in-paper",
+  "country": "MAR",
+  "release_between_stages": true,
+  "generation": {
+    "backend": "ollama",
+    "model": "llama3:8b-instruct-q2_K",
+    "context_tokens": 2048,
+    "max_new_tokens": 150,
+    "seed": 42,
+    "tokenizer_model": "NousResearch/Meta-Llama-3-8B-Instruct",
+    "server_adds_bos": true
+  },
+  "perplexity": {
+    "backend": "gguf",
+    "model_path": ".runtime/llama3-q2.gguf",
+    "max_length": 512,
+    "stride": 256
+  },
+  "retrieval_backend": "original",
+  "retrieval_threshold": 0.4
+}

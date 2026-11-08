@@ -1,0 +1,11 @@
+{
+  "source": "results\\evaluations\\campagne_complete\\responses.csv",
+  "source_sha256": "c3281d2ef2dffb7292b0502322340687a518d6f2284cb78d8615dfea7b84f5c8",
+  "rows": 120,
+  "new_metrics": "ROUGE precision/recall; existing values retained",
+  "social_option": "none",
+  "perplexity_measured": false,
+  "generation_rerun": false,
+  "energy_reconstructed": false,
+  "full_article_reproduction": false
+}

@@ -1,0 +1,29 @@
+{
+  "source_sha256": "c3281d2ef2dffb7292b0502322340687a518d6f2284cb78d8615dfea7b84f5c8",
+  "gguf_sha256": "eaa3ffa9267f65b2beebac4803927e752bd5ac6cc8d0e256e38e9df2ec214af4",
+  "method": "saved-french-answers-likelihood-nli-batch5-v3",
+  "code_sha256": {
+    "migrant_ai\\__init__.py": "05979c945e42ad6ea9b6e19e2607515f3c31ffb8f55f8ead66bdc25f0e9bba08",
+    "migrant_ai\\campaign.py": "6386848088f1da6e7b5797800f79497e05476527c1e5a86486ed687786a7c5d7",
+    "migrant_ai\\complete_evaluation.py": "8b49cc131c9ddc745cdc5b12f41f832f0f3f632bd0725f3b966905d4e55e9baa",
+    "migrant_ai\\context_processing.py": "dfa7528b9f73135e232b1154b99964aebe673d352ff0cc02dfef9392837d3fcf",
+    "migrant_ai\\diagnostic.py": "413e2426d8d8f9240748bb8ebfedda24ce424d3f702be97fe26f95bc8cdb3626",
+    "migrant_ai\\enrich_results.py": "1d1cd68cb565c1593d0adab0c0abdc75425378f2f0286028b56ac75cc918fe61",
+    "migrant_ai\\experiments.py": "5526a7b03c27c05b69a42e74c8e5aa9072b529d46d6716f215f2f59461850958",
+    "migrant_ai\\fairness.py": "e1f1c5f0b842bf4be82e79c6c73651389d10a176e2da57493133691ed3c45c75",
+    "migrant_ai\\footprint.py": "5358422fb1d4fbce63273305b1830f50341122b4d4ddec39cab45b4291aa2ba4",
+    "migrant_ai\\generation.py": "7b4fee16e6e31b35c1de2669a6e980a05dcdbc729053b978b38f0cfea78ee1d3",
+    "migrant_ai\\interface.py": "6aa3f61ae3bd258a1f9c0917c5d65978144da71b7ee627f060d3d4f63d56816e",
+    "migrant_ai\\model_registry.py": "170c635a69f5b74906e261cf52755a3fd9d916216ca36d7477ea2a1f1277d54b",
+    "migrant_ai\\paper_metrics.py": "0c01b7a130dad56363503a9008c5bcd3d22b6de703da01da87d92a3a765e8bb1",
+    "migrant_ai\\perplexity.py": "fa16a97b258a2f217c742221b1167d22db31fec909f7589a063240b8e35c94f9",
+    "migrant_ai\\pipeline.py": "dc64ab5237473d5ed1fcfe4337ec6714b6ce6c44067b886258ae2a657c1355e3",
+    "migrant_ai\\prepare_models.py": "8d17c4b426ca5b02381564ab6f2aa20d61dec0645f13f878570ec7927f7c1d29",
+    "migrant_ai\\quality.py": "e3cb8415cdd4153aedec4f0e5da04c0cf7d3a7b2835472d0e3b670e431879622",
+    "migrant_ai\\run_study.py": "743b44bd9637414c3a6d1fe6cdea5386d25e8782f5d0ae7e08c50fd8d718f6fe",
+    "migrant_ai\\study_generation.py": "1d24d5bcbb70c570199c1cb81776687167ecfedafb7527174fd405c7042bd5f2",
+    "migrant_ai\\study_protocol.py": "61152b8a2a3c3898408a8f182714507af1602486428aa72b4606bbc354aee1d3",
+    "migrant_ai\\study_retrieval.py": "f6afab7d7a1fa59222e7ff052653ab0fb70bfa21b99a359e7a0ab48610b343be",
+    "migrant_ai\\validate_generation.py": "789162b2f326a19bdcd36b1ec4a95f493338260287936351481c7d8de9865641"
+  }
+}

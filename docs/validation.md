@@ -29,3 +29,13 @@ Un audit approfondi du cas incorrect est disponible dans [diagnostic_reponse.md]
 ## Campagne complète terminée
 
 Les six configurations ont maintenant chacune 20 réponses avec scores de qualité, biais NLI et mesures CodeCarbon : 120/120 pour chaque étape. Voir [les résultats et leurs limites](resultats_campagne.md). Les paragraphes précédents décrivent les contrôles initiaux, notamment l’essai court, conservés pour la traçabilité. La campagne complète ne garantit pas la justesse de toutes les réponses.
+
+## Périmètre par rapport à l’article
+
+La campagne dite complète couvre les six configurations du protocole local sur 20 questions. Elle ne reproduit pas l’ensemble des expériences du PDF (125 configurations sur 91 questions). Les méthodes supplémentaires sont désormais proposées dans le lanceur expérimental et leur état d’exécution est documenté séparément ; cela ne transforme pas les anciens résultats en reproduction du PDF. Voir [l’audit de correspondance](conformite_article.md) pour le détail et les responsabilités.
+
+## Validation des méthodes complémentaires
+
+Les contrôles réels de perplexité, des deux détecteurs du PDF, de BART et du pilote apparié sont sauvegardés. L’enrichissement des 120 réponses est terminé et vérifié : cinq scores sociaux, perplexité, conservation des textes et des mesures précédentes. Voir [le bilan](resultats_complementaires.md) et `validation_complements.json`. Les tests de fonctionnement ne démontrent pas l’exactitude des réponses ou des détecteurs.
+
+Contrôle final : 50 tests automatisés réussis, y compris la séparation des versions d’évaluation et la conservation des 33 fichiers d’origine protégés. Les contrôles de modèle réels et leurs limites sont documentés séparément.

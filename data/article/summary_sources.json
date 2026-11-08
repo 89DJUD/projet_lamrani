@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "Dagoberto Castellanos Nieves",
+    "Luis García-Forte"
+  ],
+  "license": "CC BY 4.0",
+  "files": [
+    {
+      "file": "HCAI_Data_125.csv",
+      "sha256": "698e895c7b5413ad2a32c56740e6d1cc5b110831e91ea92c37fd7a5b6178e346",
+      "url": "https://data.mendeley.com/public-files/datasets/rjdt5nmm88/files/5fe05ff8-e18e-49d1-94a1-754a03c1ea66/file_downloaded",
+      "doi": "10.17632/rjdt5nmm88.2",
+      "modified": false
+    },
+    {
+      "file": "Integrated_data.csv",
+      "sha256": "68ac42fa6a9f44e0270835295bf6b00b72491b7041dc5c88cf9a949e3cf98945",
+      "url": "https://data.mendeley.com/public-files/datasets/rjdt5nmm88/files/61b0deb9-892d-4f37-8d7b-44a8298f3761/file_downloaded",
+      "doi": "10.17632/rjdt5nmm88.2",
+      "modified": false
+    }
+  ]
+}
