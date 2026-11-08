@@ -69,3 +69,7 @@ utilisés. Ces deux colonnes peuvent différer.
 d’agrégation quand elle est disponible. Une version historique non enregistrée
 est notée `unrecorded`. Ne pas fusionner des versions différentes dans un même
 classement sans les traiter comme des configurations distinctes.
+
+## Campagne complète avec énergie et biais NLI
+
+Utiliser `results/evaluations/campagne_complete/configurations_completes.csv` pour les six configurations Q2_K : 20 questions et 20 mesures d’énergie chacune. Les réponses et signaux de biais individuels sont dans `responses.csv`. Voir [l’analyse des résultats](resultats_campagne.md). Les scores NLI restent exploratoires. Les identifiants C1 à C6 sont locaux à ce tableau. Énergie et CO₂ sont liés par le même facteur carbone : leur attribuer deux poids indépendants peut compter deux fois la même information. Les métriques de qualité sont aussi corrélées ; justifier les poids et étudier la sensibilité du classement.

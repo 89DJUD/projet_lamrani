@@ -1,6 +1,6 @@
 # État de validation
 
-- 27 tests unitaires exécutés avec succès dans la nouvelle organisation.
+- 30 tests unitaires exécutés avec succès dans la nouvelle organisation.
 - Interface commune ouverte sans exception après réorganisation, avec la variante Q2_K.
 - Parcours hors corpus vérifié avec la vraie recherche et les vrais embeddings.
 - CodeCarbon exécuté sur une charge CPU de diagnostic de trois secondes.
@@ -25,3 +25,7 @@ Windows et Linux. Le README et les règles Git sont maintenus comme documentatio
 et configuration du projet.
 
 Un audit approfondi du cas incorrect est disponible dans [diagnostic_reponse.md](diagnostic_reponse.md). Le contrôle technique a réussi, mais la fidélité à la règle générale reste insuffisante sur ce cas, même après renforcement de la consigne.
+
+## Campagne complète terminée
+
+Les six configurations ont maintenant chacune 20 réponses avec scores de qualité, biais NLI et mesures CodeCarbon : 120/120 pour chaque étape. Voir [les résultats et leurs limites](resultats_campagne.md). Les paragraphes précédents décrivent les contrôles initiaux, notamment l’essai court, conservés pour la traçabilité. La campagne complète ne garantit pas la justesse de toutes les réponses.

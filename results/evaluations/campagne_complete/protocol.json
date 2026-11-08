@@ -1,0 +1,64 @@
+{
+  "model": "llama3:8b-instruct-q2_K",
+  "model_digest": "2745d547f3764a7ee6902b19e08e98a8f41f0f69e5615d9dc29bb3d7a27fc715",
+  "prompt_version": "scoped-context-v2",
+  "configurations": [
+    [
+      50,
+      2,
+      0.1
+    ],
+    [
+      50,
+      2,
+      0.5
+    ],
+    [
+      50,
+      2,
+      0.9
+    ],
+    [
+      100,
+      5,
+      0.1
+    ],
+    [
+      100,
+      5,
+      0.5
+    ],
+    [
+      100,
+      5,
+      0.9
+    ]
+  ],
+  "country": "MAR",
+  "energy_scope": "retrieval_and_generation_machine_estimate",
+  "sha256": {
+    "test_set.csv": "58e3ace86f5c8785e565e92f994a02316601d8eba524fdd66a799066388497b6",
+    "index\\chunk_100\\chunks.json": "8b24b47c28b1aaef5c21ca9d1eba0b45e9e9ed381e78a482598ee974383fb03f",
+    "index\\chunk_100\\faiss.index": "145da7edaffb28ee9fdad554d11b1cbec6485088e8243348b293a6bee13b391d",
+    "index\\chunk_1000\\chunks.json": "9130f367021cfb14847cfffd564ad553ee55ad9faec0734c53f5916669b76cab",
+    "index\\chunk_1000\\faiss.index": "40b884aca0f59c0497db178a3b0758a64845630215988f02971f6b3da73c2a3b",
+    "index\\chunk_300\\chunks.json": "2275c0fe84b1a53e0ab1ee954f717505a379aed8b30515bcf4b601ae4ab0907b",
+    "index\\chunk_300\\faiss.index": "4e1f4d61034b184c6846fe49787583ad00de79865deb3196c9f0cccacca1f2c1",
+    "index\\chunk_50\\chunks.json": "b2998f033c07b0180083a0d738cf1a4599b245292c9e8d7e5357138bd4f72b54",
+    "index\\chunk_50\\faiss.index": "7db4deec832dc328f22d6da528b49e15f9f81483e5024118ab6c3054edf6d406",
+    "index\\chunk_500\\chunks.json": "1a52bb8d1c886d9a174602b05854aba7131e49b9b83752d8ca491993b4b76cdd",
+    "index\\chunk_500\\faiss.index": "e00e5f01f0b301cea14253e287baf318d28d7d28eca79b9b2e543cf25bd1d162",
+    "migrant_ai\\__init__.py": "05979c945e42ad6ea9b6e19e2607515f3c31ffb8f55f8ead66bdc25f0e9bba08",
+    "migrant_ai\\campaign.py": "6386848088f1da6e7b5797800f79497e05476527c1e5a86486ed687786a7c5d7",
+    "migrant_ai\\diagnostic.py": "413e2426d8d8f9240748bb8ebfedda24ce424d3f702be97fe26f95bc8cdb3626",
+    "migrant_ai\\experiments.py": "5526a7b03c27c05b69a42e74c8e5aa9072b529d46d6716f215f2f59461850958",
+    "migrant_ai\\fairness.py": "e1f1c5f0b842bf4be82e79c6c73651389d10a176e2da57493133691ed3c45c75",
+    "migrant_ai\\footprint.py": "5358422fb1d4fbce63273305b1830f50341122b4d4ddec39cab45b4291aa2ba4",
+    "migrant_ai\\generation.py": "7b4fee16e6e31b35c1de2669a6e980a05dcdbc729053b978b38f0cfea78ee1d3",
+    "migrant_ai\\interface.py": "6aa3f61ae3bd258a1f9c0917c5d65978144da71b7ee627f060d3d4f63d56816e",
+    "migrant_ai\\pipeline.py": "dc64ab5237473d5ed1fcfe4337ec6714b6ce6c44067b886258ae2a657c1355e3",
+    "migrant_ai\\quality.py": "e3cb8415cdd4153aedec4f0e5da04c0cf7d3a7b2835472d0e3b670e431879622",
+    "migrant_ai\\validate_generation.py": "789162b2f326a19bdcd36b1ec4a95f493338260287936351481c7d8de9865641",
+    "rag.py": "ffceddb32f3df63f0eaa9ef7d71d88bf73a16b3d27cf791395198f2b5ff5bc45"
+  }
+}

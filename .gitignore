@@ -23,3 +23,6 @@ desktop.ini
 !.env.example
 reports/
 .pytest_cache/
+
+# Verrou local de campagne
+.campaign.lock

@@ -76,7 +76,7 @@ def evaluate_test_set(path, generate, on_progress=None, bias_method="heuristic",
     """
     from .fairness import detect_bias
     from .footprint import EnergyMonitor
-    frame = pd.read_csv(path)
+    frame = path.copy() if isinstance(path, pd.DataFrame) else pd.read_csv(path)
     if frame.empty or not {"question", "reference"}.issubset(frame.columns):
         raise ValueError("CSV non vide attendu avec question et reference.")
     if not frame[["question", "reference"]].map(lambda x: isinstance(x, str) and bool(x.strip())).all().all():

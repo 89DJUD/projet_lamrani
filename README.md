@@ -103,3 +103,9 @@ consommation de la machine locale, autres processus inclus ; il ne mesure pas
 l’inférence d’un serveur distant. Ne pas remplacer une mesure absente par zéro.
 
 L’[audit de la réponse incorrecte](docs/diagnostic_reponse.md) détaille une limite constatée de recherche et de génération, ainsi que les contrôles de provenance ajoutés.
+
+## Campagne complète disponible
+
+Les 120 réponses des six configurations Llama 3 Q2_K ont été évaluées : qualité, biais NLI et énergie. Le tableau complet pour l’optimisation est `results/evaluations/campagne_complete/configurations_completes.csv`. Consulter [les résultats et limites](docs/resultats_campagne.md).
+
+Pour exécuter ou reprendre la campagne : `python -m migrant_ai.campaign`. Voir [le protocole de reprise](docs/campagne_complete.md). Les erreurs du modèle sont conservées dans les résultats.
