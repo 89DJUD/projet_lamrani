@@ -1,0 +1,83 @@
+{
+  "question": "Dans quel délai l'administration doit-elle répondre à une demande de regroupement familial ?",
+  "reference": "L'administration doit répondre dès que possible et au plus tard neuf mois après la date du dépôt de la demande.",
+  "reference_source": "01_regroupement_familial_UE.pdf p.4",
+  "official_source": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32003L0086",
+  "diagnosis": [
+    "Le contexte 50 mots / top-2 ne contient pas la règle générale attendue.",
+    "La variante Q2_K généralise une dérogation destinée aux chercheurs.",
+    "Même avec le passage correct parmi cinq extraits, la réponse reste incorrecte sur cet essai.",
+    "Avec le seul paragraphe correct, la réponse est neuf mois."
+  ],
+  "scope_prompt_alone_fixed_case": false,
+  "coding_tests_passed": 27,
+  "diagnostic_replays": [
+    {
+      "configuration": "chunk50_k2",
+      "model": "llama3:8b-instruct-q2_K",
+      "prompt_version": "scoped-context-v2",
+      "question": "Dans quel délai l'administration doit-elle répondre à une demande de regroupement familial ?",
+      "prediction": "Selon le contexte, l'administration doit répondre à une demande de regroupement familial dans un délai de 90 jours à compter de l'introduction de la demande complète.\n\nSource : [05_etudiants_chercheurs_UE.pdf, p. 23]",
+      "seconds": 63.00229940000281,
+      "retrieved_sources": [
+        {
+          "source": "05_etudiants_chercheurs_UE.pdf",
+          "page": 23,
+          "score": 0.7970525026321411
+        },
+        {
+          "source": "01_regroupement_familial_UE.pdf",
+          "page": 5,
+          "score": 0.7852938175201416
+        }
+      ],
+      "contains_general_rule": false
+    },
+    {
+      "configuration": "chunk100_k5",
+      "model": "llama3:8b-instruct-q2_K",
+      "prompt_version": "scoped-context-v2",
+      "question": "Dans quel délai l'administration doit-elle répondre à une demande de regroupement familial ?",
+      "prediction": "Selon le contexte, la réponse est : L'administration doit répondre à la demande de regroupement familial dans un délai de 90 jours à compter de l'introduction de la demande complète.\n\nNote : Vérifiez les conditions d'application du passage [01_regroupement_familial_UE.pdf, p. 6] pour une réponse exacte.",
+      "seconds": 64.34018800000194,
+      "retrieved_sources": [
+        {
+          "source": "05_etudiants_chercheurs_UE.pdf",
+          "page": 23,
+          "score": 0.7855767607688904
+        },
+        {
+          "source": "01_regroupement_familial_UE.pdf",
+          "page": 5,
+          "score": 0.7717361450195312
+        },
+        {
+          "source": "01_regroupement_familial_UE.pdf",
+          "page": 6,
+          "score": 0.7357057332992554
+        },
+        {
+          "source": "01_regroupement_familial_UE.pdf",
+          "page": 4,
+          "score": 0.7180906534194946
+        },
+        {
+          "source": "09_carte_bleue_europeenne_UE.pdf",
+          "page": 28,
+          "score": 0.6931718587875366
+        }
+      ],
+      "contains_general_rule": true
+    }
+  ],
+  "gold_context_control": {
+    "purpose": "oracle_context_diagnostic_not_production_or_benchmark",
+    "model": "llama3:8b-instruct-q2_K",
+    "prompt_version": "scoped-context-v2",
+    "question": "Dans quel délai l'administration doit-elle répondre à une demande de regroupement familial ?",
+    "context": "[01_regroupement_familial_UE.pdf, p. 4] 4. Dès que possible, et en tout état de cause au plus tard neuf mois après la date du dépôt de la demande, les autorités compétentes de l'État membre notifient par écrit à la personne qui a déposé la demande la décision la concernant. Dans des cas exceptionnels liés à la complexité de l'examen de la demande, le délai visé au premier alinéa peut être prorogé. La décision de rejet de la demande est dûment motivée. Toute conséquence de l'absence de décision à l'expiration du délai visé au premier alinéa doit être réglée par la législation nationale de l'État membre concerné.",
+    "prediction": "Selon le contexte, les autorités compétentes doivent notifier la décision concernant la demande de regroupement familial au plus tard neuf mois après la date du dépôt de la demande.\n\nEn d'autres termes, le délai est de neuf mois à compter de la date du dépôt de la demande.\n\nSource : [01_regroupement_familial_UE.pdf, p. 4]",
+    "seconds": 40.96773800000665
+  },
+  "limitations": "Le contrôle avec source de référence isolée sert uniquement au diagnostic ; il ne constitue pas une amélioration mesurée de la recherche ni un résultat de benchmark."
+}

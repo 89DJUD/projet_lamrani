@@ -1,97 +1,105 @@
-# Assistant pour les migrants — LLM + RAG
+# Assistant pour l’intégration des migrants — LLM et RAG
 
-Projet d'équipe inspiré de Castellanos-Nieves & García-Forte (2025),
-*Human-Centered AI for Migrant Integration Through LLM and RAG Optimization*.
+Projet de classe inspiré de Castellanos-Nieves et García-Forte,
+[Human-Centered AI for Migrant Integration Through LLM and RAG Optimization](https://doi.org/10.3390/app15010325).
 
-| Partie | Responsable | Contenu |
-|---|---|---|
-| **B** | Corpus et RAG | `rag.py`, `corpus/`, `index/`, `experiments_rag.py`, `experiments_llm.py` — **terminée** |
-| **I** | LLM et évaluation | `llm.py`, `evaluation.py`, `bias_detection.py`, `energy_metrics.py` |
-| **D** | Décision multicritère (RIM, TOPSIS, VIKOR) | part de `results/resultats_pour_D.csv` |
+L’application recherche des passages dans un corpus de PDF, génère une réponse
+avec Llama 3 puis évalue sa qualité, les signaux de biais et son impact environnemental.
+Les scripts et données déjà présents restent disponibles ; les contributions
+suivantes peuvent s’appuyer sur les mêmes index et résultats.
 
-## Installation (Windows, à faire une fois)
+## Installation
 
-**Prérequis :** Python **3.12** (pas 3.13 ni 3.14), Git, ~10 Go libres.
+Prérequis : Python 3.12 et [Ollama](https://ollama.com/download).
+Depuis la racine du dépôt, dans PowerShell :
 
 ```powershell
-git clone <URL_DU_DEPOT>
-cd Migrant_AI_Module_I
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements-application.txt
+ollama pull llama3:8b-instruct-q2_K
 ```
 
-- Si PowerShell refuse `Activate.ps1` :
-  `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, puis réessayer.
-- Le premier lancement télécharge les modèles d'embeddings (~500 Mo) : il faut Internet.
+`requirements-application.txt` contient les dépendances de la version intégrée.
+`requirements.txt` conserve la configuration d’origine. `requirements-validated.txt`
+consigne l’environnement utilisé pour les vérifications locales.
 
-### Llama 3 (seulement pour générer de nouvelles réponses)
+La variante Q2_K est plus compressée (environ 3,2 Go de poids) et utilise un
+contexte de 2048 tokens. Elle réduit les besoins mémoire, avec un compromis
+possible sur la qualité. Son démarrage dépend de la RAM disponible. La variante
+standard `llama3:8b` reste proposée dans l’interface.
 
-1. Installer Ollama : <https://ollama.com/download>
-2. Dans un **nouveau** terminal : `ollama pull llama3:8b` (4,7 Go).
-3. Ollama doit être ouvert (icône près de l'horloge) avant de lancer l'application.
-
-Sans Ollama, on peut choisir `flan-t5-small` dans l'application (petit modèle, réponses faibles).
-
-## Lancer l'application
+## Lancer l’application commune
 
 ```powershell
-.\.venv\Scripts\Activate.ps1
-streamlit run app.py
+$env:MIGRANT_LLM_MODEL = "llama3:8b-instruct-q2_K"
+$env:MIGRANT_OLLAMA_KEEP_ALIVE = "0"
+python -m streamlit run application.py
 ```
 
-Onglets : **Poser une question** (RAG + sources), **Documents** (corpus et index),
-**Évaluation** (le jeu de test `test_set.csv` → BLEU, ROUGE, similarité, export CSV).
+Les onglets permettent de consulter les documents, poser une question avec ses
+sources et évaluer le jeu de test. Les réglages sociaux et environnementaux se
+trouvent dans la barre latérale. Les modèles d’embeddings et le classifieur NLI
+optionnel sont téléchargés au premier usage.
 
-## Ce qui est déjà fourni (rien à recalculer)
+## Organisation
 
-| Fichier | Contenu |
+| Fonction | Emplacement |
 |---|---|
-| `corpus/` | 8 PDF : 7 directives de l'UE (en français) + guide du HCR (en anglais) |
-| `index/chunk_{50,100,300,500,1000}/` | 5 index FAISS déjà construits (passages de 50 à 1000 mots) |
-| `test_set.csv` | 20 questions + réponse de référence + page source (dont 1 hors sujet) |
-| `results/retrieval_results.csv` | Qualité de la recherche : 5 tailles × 5 top-K (Hit@K, MRR) |
-| `results/top1_scores.csv` | Justification du seuil de similarité (0,40) |
-| `results/llm_raw.csv` | Chaque réponse de Llama 3, par question et par configuration |
-| `results/resultats_pour_D.csv` | **Une ligne par configuration (C1–C6), scores médians** |
+| Corpus, découpage, embeddings, index et recherche | `rag.py`, `corpus/`, `index/` |
+| Interface commune | `application.py`, `migrant_ai/interface.py` |
+| Génération Llama 3 | `migrant_ai/generation.py` |
+| BLEU, ROUGE et similarité | `migrant_ai/quality.py` |
+| Indicateurs de biais | `migrant_ai/fairness.py` |
+| Énergie et CO2 | `migrant_ai/footprint.py` |
+| Campagnes et export | `migrant_ai/experiments.py` |
+| Résultats et données de référence | `results/`, `test_set.csv` |
+| Vérification et transmission des résultats | `tests/`, `docs/` |
 
-### Colonnes de `resultats_pour_D.csv`
+Les fichiers Python existants conservent leur contenu et leurs interfaces.
+L’historique Git conserve les contributions de l’équipe.
 
-| Colonne | Sens | Sens du critère |
-|---|---|---|
-| `chunk_size`, `top_k`, `temperature` | Paramètres de la configuration | — |
-| `bleu`, `rouge1`, `rouge2`, `rougeL`, `semantic_similarity` | Qualité de la réponse vs référence (médiane, 0 à 1) | à maximiser |
-| `hit_page` | Part des questions où la bonne page est retrouvée | à maximiser |
-| `mrr` | Rang moyen inverse de la bonne page | à maximiser |
-| `seconds_median` | Temps de réponse médian (CPU, sans carte graphique) | à minimiser |
+## Expériences
 
-Remarque : le temps de C4 (79 s) est probablement gonflé par une perturbation du PC pendant la mesure.
-
-## Choix techniques de la partie B
-
-- Extraction du texte : `pypdf`, nettoyage des césures et espaces.
-- Découpage : par page, en passages de N **mots** avec 20 % de recouvrement ; passages < 25 mots écartés.
-- Embeddings : `paraphrase-multilingual-MiniLM-L12-v2` (questions en français, un document en anglais).
-- Index : FAISS `IndexFlatIP` sur vecteurs normalisés (= similarité cosinus).
-- Seuil de similarité 0,40 : en dessous, la question est jugée hors corpus et le LLM n'est pas appelé.
-- Llama 3 8B via Ollama, graine 42, 150 tokens max, consigne en français.
-
-## Relancer les expériences (facultatif)
+Réévaluer les réponses déjà fournies, sans les régénérer :
 
 ```powershell
-python experiments_rag.py   # ~1 min, sans LLM
-python experiments_llm.py   # plusieurs heures sur CPU, reprend où il s'est arrêté
+python -m migrant_ai.experiments --from-csv results/llm_raw.csv --reevaluate --output results/evaluations/reevaluation_multilingue
 ```
 
-Ajouter des PDF : les mettre dans `corpus/`, puis onglet **Documents** → *Construire les 5 index* (~10 min).
+Tester deux nouvelles questions avant une campagne complète :
 
-## Problèmes fréquents
+```powershell
+python -m migrant_ai.experiments --model llama3:8b-instruct-q2_K --chunk-sizes 50 --top-k 2 --temperatures 0.1 --limit 2 --energy --country MAR --output results/evaluations/essai_court
+```
 
-| Message | Solution |
-|---|---|
-| `ollama n'est pas reconnu` | Fermer et rouvrir le terminal après l'installation d'Ollama |
-| « Ollama ne tourne pas » dans l'application | Ouvrir l'application Ollama, puis recharger la page |
-| `Une stratégie de contrôle d'application a bloqué ce fichier` | Windows Smart App Control : Sécurité Windows → Contrôle des applications → désactiver |
-| `No module named ...` | L'environnement n'est pas activé : `.\.venv\Scripts\Activate.ps1` |
-| Calcul bloqué pendant des heures | PC en veille : le laisser branché, couvercle ouvert |
+Le paramètre `--bias-method model` active le classifieur NLI multilingue.
+Le mode lexical par défaut fonctionne sans ce modèle supplémentaire.
+Une campagne limitée ne figure pas dans le tableau des configurations complètes.
+
+## Transmission pour l’optimisation
+
+Les CSV historiques, dont **`results/resultats_pour_D.csv`**, sont conservés.
+Le [guide des données pour l’optimisation](docs/optimisation.md) décrit les colonnes,
+les critères, les configurations incomplètes et les valeurs manquantes.
+Les méthodes RIM, TOPSIS et VIKOR seront ajoutées lors de cette prochaine étape.
+
+## Vérification
+
+```powershell
+python -m unittest discover -s tests -v
+python -m migrant_ai.diagnostic
+python -m migrant_ai.validate_generation --wait
+```
+
+Le dernier contrôle attend les poids puis essaie deux questions réelles. Son état
+est enregistré dans `reports/generation_validation.json`. Consulter le
+[compte rendu de validation](docs/validation.md) pour distinguer les vérifications
+réelles, les simulations et les étapes encore en attente.
+
+Les réponses peuvent contenir des erreurs et ne constituent pas un avis juridique.
+Les scores de biais demandent une validation humaine. CodeCarbon estime la
+consommation de la machine locale, autres processus inclus ; il ne mesure pas
+l’inférence d’un serveur distant. Ne pas remplacer une mesure absente par zéro.
+
+L’[audit de la réponse incorrecte](docs/diagnostic_reponse.md) détaille une limite constatée de recherche et de génération, ainsi que les contrôles de provenance ajoutés.

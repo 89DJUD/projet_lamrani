@@ -14,3 +14,12 @@ results/*.txt
 Thumbs.db
 desktop.ini
 .vscode/
+
+# Installation locale, modèles et rapports volatils
+.runtime/
+.test_dependencies/
+.env
+.env.*
+!.env.example
+reports/
+.pytest_cache/

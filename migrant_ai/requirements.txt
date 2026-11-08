@@ -1,0 +1,14 @@
+# Dépendances de l’application et des expériences.
+streamlit>=1.56,<2
+transformers>=4.46,<5
+torch>=2.5,<3
+sentence-transformers>=3.3,<6
+rouge-score>=0.1.2,<0.2
+sacrebleu>=2.4,<3
+pandas>=2.2,<4
+numpy>=1.26,<3
+ollama>=0.4,<1
+faiss-cpu>=1.9,<2
+pypdf>=5,<8
+codecarbon>=3,<4
+sentencepiece>=0.2,<1

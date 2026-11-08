@@ -1,0 +1,14 @@
+{
+  "model": "llama3:8b-instruct-q2_K",
+  "technical_validation": "passed",
+  "real_generation": true,
+  "n_questions": 2,
+  "n_energy_available": 2,
+  "complete_test_set": false,
+  "factual_accuracy_guaranteed": false,
+  "quality_note": "Une reponse ne correspond pas a la reference du jeu de test.",
+  "results_directory": "results/evaluations/essai_court",
+  "prompt_version": "legacy-context-v1",
+  "factual_case_status": "failed",
+  "error_audit": "docs/diagnostic_reponse.md"
+}
