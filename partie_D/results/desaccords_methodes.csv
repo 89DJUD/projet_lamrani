@@ -1,0 +1,7 @@
+﻿config,rang_TOPSIS,rang_VIKOR,rang_RIM,ecart_type_rangs,etendue_rangs
+C6,3,4,4,0.5773502691896258,1
+C1,4,3,3,0.5773502691896258,1
+C3,2,2,2,0.0,0
+C5,1,1,1,0.0,0
+C2,5,5,5,0.0,0
+C4,6,6,6,0.0,0

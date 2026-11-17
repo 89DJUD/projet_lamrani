@@ -1,0 +1,31 @@
+# Thème de l'application : clair et sombre (bascule dans le menu Settings).
+
+[theme]
+font = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+baseRadius = "8px"
+buttonRadius = "8px"
+showWidgetBorder = true
+showSidebarBorder = true
+headingFontWeights = [700, 600, 600, 600, 600, 600]
+
+[theme.light]
+primaryColor = "#0F766E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F7F6"
+textColor = "#14211F"
+borderColor = "#DDE5E3"
+linkColor = "#0F766E"
+
+[theme.dark]
+primaryColor = "#2DD4BF"
+backgroundColor = "#0E1513"
+secondaryBackgroundColor = "#17211F"
+textColor = "#E6EEEC"
+borderColor = "#2A3734"
+linkColor = "#5EEAD4"
+
+[theme.light.sidebar]
+backgroundColor = "#F4F7F6"
+
+[theme.dark.sidebar]
+backgroundColor = "#0A100F"

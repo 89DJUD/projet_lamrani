@@ -1,0 +1,13 @@
+﻿scenario,methode,best_config,description
+uniforme,TOPSIS,C5,Pondération uniforme (1/n par critère).
+uniforme,VIKOR,C5,Pondération uniforme (1/n par critère).
+uniforme,RIM,C5,Pondération uniforme (1/n par critère).
+qualite,TOPSIS,C5,"Scénario 'qualite' : poids par groupe qualité=60%, fiabilité=20%, rapidité=20%."
+qualite,VIKOR,C5,"Scénario 'qualite' : poids par groupe qualité=60%, fiabilité=20%, rapidité=20%."
+qualite,RIM,C5,"Scénario 'qualite' : poids par groupe qualité=60%, fiabilité=20%, rapidité=20%."
+rapidite,TOPSIS,C3,"Scénario 'rapidite' : poids par groupe qualité=20%, fiabilité=20%, rapidité=60%."
+rapidite,VIKOR,C5,"Scénario 'rapidite' : poids par groupe qualité=20%, fiabilité=20%, rapidité=60%."
+rapidite,RIM,C3,"Scénario 'rapidite' : poids par groupe qualité=20%, fiabilité=20%, rapidité=60%."
+equite_env,TOPSIS,C5,"Scénario 'equite_env' : poids par groupe qualité=30%, fiabilité=50%, rapidité=20%. ATTENTION : aucun critère équité/environnement n'est présent dans le CSV. Le scénario est reporté sur la fiabilité (hit_page, mrr) — hypothèse d'analyse, non validée."
+equite_env,VIKOR,C5,"Scénario 'equite_env' : poids par groupe qualité=30%, fiabilité=50%, rapidité=20%. ATTENTION : aucun critère équité/environnement n'est présent dans le CSV. Le scénario est reporté sur la fiabilité (hit_page, mrr) — hypothèse d'analyse, non validée."
+equite_env,RIM,C5,"Scénario 'equite_env' : poids par groupe qualité=30%, fiabilité=50%, rapidité=20%. ATTENTION : aucun critère équité/environnement n'est présent dans le CSV. Le scénario est reporté sur la fiabilité (hit_page, mrr) — hypothèse d'analyse, non validée."
