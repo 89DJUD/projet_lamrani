@@ -1,0 +1,22 @@
+{
+  "purpose": "inference_batch_equivalence_on_actual_saved_answer",
+  "seconds": 8.937290300003951,
+  "maximum_absolute_score_difference": 0.002971947193145752,
+  "tolerance": 1e-05,
+  "passed": false,
+  "old": {
+    "stereotype_score": 0.00042720785131677985,
+    "anti_stereotype_score": 0.0016875097062438726,
+    "neutral_score": 0.0001491294096922502,
+    "hate_score": 0.00018128944793716073,
+    "non_hate_score": 0.7859664559364319
+  },
+  "new": {
+    "stereotype_score": 0.00041894835885614157,
+    "anti_stereotype_score": 0.0016875097062438726,
+    "neutral_score": 0.00014942092821002007,
+    "hate_score": 0.00018128944793716073,
+    "non_hate_score": 0.7829945087432861
+  },
+  "decision": "Not bit-equivalent at 1e-5; no prior scores reused. All additional scores recalculated consistently as batch5-v3, with explicit inference configuration. This check does not establish classification accuracy."
+}

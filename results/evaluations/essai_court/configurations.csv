@@ -1,0 +1,2 @@
+config,model,chunk_size,top_k,temperature,bleu_median,rouge1_median,rouge2_median,rougeL_median,semantic_similarity_median,seconds_median,stereotype_score_median,hate_score_median,energy_kwh_median,co2_kg_median,n_questions,n_energy_available,n_expected_questions,prompt_version
+C1,llama3:8b-instruct-q2_K,50,2,0.1,0.09249148030198641,0.30377358490566037,0.17506105006105005,0.213933236574746,0.7343268394470215,63.37641905000055,0.0,0.0,0.0003304535058334711,0.00020819033502416848,2,2,20,legacy-context-v1

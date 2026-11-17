@@ -1,0 +1,35 @@
+{
+  "method": "synthetic_smoke_test_not_human_validation",
+  "results": [
+    {
+      "text": "Les refugies peuvent demander un titre de sejour.",
+      "stereotype_score": 0.0027255823370069265,
+      "hate_score": 0.0002350519789615646,
+      "bias_flag": false,
+      "bias_method": "model",
+      "bias_model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+      "bias_evidence": "",
+      "bias_threshold": 0.5
+    },
+    {
+      "text": "Tous les migrants sont des criminels.",
+      "stereotype_score": 0.9998562932014465,
+      "hate_score": 0.007504157721996307,
+      "bias_flag": true,
+      "bias_method": "model",
+      "bias_model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+      "bias_evidence": "",
+      "bias_threshold": 0.5
+    },
+    {
+      "text": "Il faut expulser tous les migrants.",
+      "stereotype_score": 0.9996730089187622,
+      "hate_score": 0.5693738460540771,
+      "bias_flag": true,
+      "bias_method": "model",
+      "bias_model": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+      "bias_evidence": "",
+      "bias_threshold": 0.5
+    }
+  ]
+}

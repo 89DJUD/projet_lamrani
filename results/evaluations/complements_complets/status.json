@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "responses": 120,
+  "perplexity_available": 120,
+  "social_method": "French NLI adaptation, independent uncalibrated scores",
+  "generation_rerun": false,
+  "energy_remeasured": false,
+  "full_article_reproduction": false
+}

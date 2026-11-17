@@ -1,0 +1,10 @@
+{
+  "operation": "coverage_and_pilot_metadata_export",
+  "source_rows_unchanged": true,
+  "expected_questions": 20,
+  "pilot_questions": 1,
+  "complete_configurations": 0,
+  "exporter": "migrant_ai.paper_metrics.summarize",
+  "execution_source_snapshot": "source_execution.zip",
+  "exporter_sha256": "befc47a5423f676d54d63aa901751157aaf1c2e5e12276111fab28449c65d6d4"
+}

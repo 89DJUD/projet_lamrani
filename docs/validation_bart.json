@@ -1,0 +1,17 @@
+{
+  "purpose": "real_model_functional_smoke_not_response_benchmark",
+  "source": "user-provided article, page 1 abstract",
+  "input": "The enhancement of mechanisms to protect the rights of migrants and refugees\nwithin the European Union represents a critical area for human-centered artificial intel-\nligence (HCAI). Traditionally, the focus on algorithms alone has shifted toward a more\ncomprehensive understanding of AI’s potential to shape technology in ways which better\nserve human needs, particularly for disadvantaged groups. Large language models (LLMs)\nand retrieval-augmented generation (RAG) offer significant potential to bridging gaps for\nvulnerable populations, including immigrants, refugees, and individuals with disabilities.\nImplementing solutions based on these technologies involves critical factors which influ-\nence the pursuit of approaches aligning with humanitarian interests. This study presents\na proof of concept utilizing the open LLM model LLAMA 3 and a linguistic corpus com-\nprising legislative, regulatory, and assistance information from various European Union\nagencies concerning migrants. We evaluate generative metrics, energy efficiency metrics,\nand metrics for assessing contextually appropriate and non-discriminatory responses. Our\nproposal involves the optimal tuning of key hyperparameters for LLMs and RAG through\nmulti-criteria decision-making (MCDM) methods to ensure the solutions are fair, equitable,\nand non-discriminatory. The optimal configurations resulted in a 20.1% reduction in carbon\nemissions, along with an 11.3% decrease in the metrics associated with bias. The findings\nsuggest that by employing the appropriate methodologies and techniques, it is feasible\nto implement HCAI systems based on LLMs and RAG without undermining the social\nintegration of vulnerable populations.",
+  "summary": "The enhancement of mechanisms to protect the rights of migrants and refugeeswithin the European Union represents a critical area for human-centered artificial intel-ligence (HCAI) Large language models (LLMs) and retrieval-augmented generation (RAG) offer significant potential to bridging gaps for vulnerable populations.",
+  "details": [
+    {
+      "applied": true,
+      "input_tokens": 340,
+      "output_tokens": 64,
+      "finished_with_eos": true,
+      "length_limit_reached": false
+    }
+  ],
+  "seconds": 14.786322899999504,
+  "limitation": "English abstract smoke only; this does not validate BART on the French legal corpus or prove answer improvements."
+}

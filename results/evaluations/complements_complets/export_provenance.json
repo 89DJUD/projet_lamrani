@@ -1,0 +1,6 @@
+{
+  "operation": "version-labelled aggregation of measured responses",
+  "inference_rerun": false,
+  "execution_source": "source_execution.zip",
+  "exporter_sha256": "50185b5e9f085ef3fd27c121d4422c0b2698ca5ccf9dd8c56fc9021be8b48635"
+}

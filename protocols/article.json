@@ -1,0 +1,56 @@
+{
+  "scope": "article-methods-original-data-required",
+  "test_set": "data/article/questions.csv",
+  "expected_questions": 91,
+  "language": "es",
+  "corpus": "data/article/corpus",
+  "variants": [
+    "baseline",
+    "integrated"
+  ],
+  "chunk_sizes": [
+    50,
+    100,
+    300,
+    500,
+    1000
+  ],
+  "top_k": [
+    1,
+    2,
+    5,
+    8,
+    10
+  ],
+  "temperatures": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "embedding_model": "BAAI/bge-base-en-v1.5",
+  "similarity_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "social_backend": "paper",
+  "summary_model": "facebook/bart-large-cnn",
+  "filter_threshold": 0.5,
+  "threshold_origin": "project-choice-not-specified-in-paper",
+  "country": "MAR",
+  "release_between_stages": true,
+  "generation": {
+    "backend": "transformers",
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "device": "cuda",
+    "context_tokens": 8192,
+    "max_new_tokens": 256,
+    "seed": 42
+  },
+  "perplexity": {
+    "backend": "transformers",
+    "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "device": "cuda",
+    "max_length": 512,
+    "stride": 256
+  },
+  "retrieval_backend": "study"
+}

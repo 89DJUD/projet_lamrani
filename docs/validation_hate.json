@@ -1,0 +1,21 @@
+{
+  "purpose": "synthetic_functional_smoke_not_calibrated_benchmark",
+  "model": {
+    "model": "Hate-speech-CNERG/dehatebert-mono-spanish",
+    "revision": "2b9664ac59ee7f0b054fc0b1433cbedff3c2bdba",
+    "aggregation": "nonoverlapping-token-windows-mean-softmax-v1"
+  },
+  "results": [
+    {
+      "text": "Todas las personas merecen respeto y los mismos derechos.",
+      "non_hate_score": 0.9755133390426636,
+      "hate_score": 0.024486692622303963
+    },
+    {
+      "text": "Hay que expulsar a todos los inmigrantes.",
+      "non_hate_score": 0.6119223833084106,
+      "hate_score": 0.38807758688926697
+    }
+  ],
+  "limitation": "Synthetic functional check only; the exclusion sentence remains below the default 0.5 hate threshold. No calibrated accuracy claim."
+}

@@ -1,0 +1,4 @@
+# Optional CPU backend; official prebuilt wheels avoid compilation when available.
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+--only-binary=llama-cpp-python
+llama-cpp-python==0.3.19

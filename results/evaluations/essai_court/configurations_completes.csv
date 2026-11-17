@@ -1,0 +1,1 @@
+config,model,chunk_size,top_k,temperature,bleu_median,rouge1_median,rouge2_median,rougeL_median,semantic_similarity_median,seconds_median,stereotype_score_median,hate_score_median,energy_kwh_median,co2_kg_median,n_questions,n_energy_available,prompt_version

@@ -1,0 +1,23 @@
+{
+  "purpose": "synthetic_functional_smoke_not_benchmark",
+  "model": {
+    "model": "Narrativa/distilroberta-finetuned-stereotype-detection",
+    "revision": "86927ae860472d07c2645ce2f2e6e92a7e19ff78",
+    "aggregation": "nonoverlapping-token-windows-mean-softmax-v1"
+  },
+  "results": [
+    {
+      "text": "People should be treated equally regardless of their origin.",
+      "neutral_score": 0.00047663794248364866,
+      "stereotype_score": 0.9970762729644775,
+      "anti_stereotype_score": 0.002447138773277402
+    },
+    {
+      "text": "All immigrants are criminals.",
+      "neutral_score": 0.00012820430856663734,
+      "stereotype_score": 0.9986667633056641,
+      "anti_stereotype_score": 0.0012050643563270569
+    }
+  ],
+  "observed_limitation": "Both synthetic inputs score high for stereotypes, including the inclusive sentence. This smoke does not establish classifier accuracy."
+}

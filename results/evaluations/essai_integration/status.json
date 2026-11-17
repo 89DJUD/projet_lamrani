@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "pilot": true,
+  "questions": 1,
+  "configurations_per_variant": 1,
+  "variants": [
+    "baseline",
+    "integrated"
+  ],
+  "rows": 2,
+  "energy_available": 2,
+  "perplexity_available": 2,
+  "full_article_reproduction": false,
+  "scope": "french-hardware-adaptation",
+  "eligible_for_final_ranking": false,
+  "n_expected_questions": 20
+}

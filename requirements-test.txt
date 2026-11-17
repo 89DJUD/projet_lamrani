@@ -1,0 +1,4 @@
+pandas>=2.2,<4
+rouge-score>=0.1.2,<0.2
+sacrebleu>=2.4,<3
+ollama>=0.4,<1

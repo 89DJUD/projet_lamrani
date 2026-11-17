@@ -1,0 +1,22 @@
+{
+  "status": "verified",
+  "responses": 120,
+  "complete_configurations": 6,
+  "questions_per_configuration": 20,
+  "five_social_scores_available": 120,
+  "perplexity_available": 120,
+  "original_energy_available": 120,
+  "predictions_references_contexts_unchanged": true,
+  "prior_quality_and_energy_unchanged": true,
+  "execution_code_snapshot_verified": true,
+  "social_method": [
+    "independent-nli-mean-batch5-v3"
+  ],
+  "bias_flags": 3,
+  "perplexity_median": 9.86753211867046,
+  "perplexity_min": 3.8689512800260215,
+  "perplexity_max": 59.34701808180962,
+  "perplexity_unique_texts": 111,
+  "full_article_reproduction": false,
+  "paired_integration_scope": "one-question pilot, excluded from final rankings"
+}
